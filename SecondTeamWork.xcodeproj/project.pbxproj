@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A3BC57F2694CBD700CB1A24 /* ImageCropHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC57E2694CBD700CB1A24 /* ImageCropHandler.swift */; };
 		9A3BC5822694CC1000CB1A24 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC5812694CC1000CB1A24 /* UIImageView+Extension.swift */; };
-		9A8C2DDA2694675C00CB7B66 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C2DD92694675C00CB7B66 /* EditImageViewController.swift */; };
-		9A8C2DDE2694678300CB7B66 /* EditImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C2DDD2694678300CB7B66 /* EditImageViewController.storyboard */; };
+		9A3BC58C2694F10600CB1A24 /* EditImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BC5892694F10600CB1A24 /* EditImageViewController.storyboard */; };
+		9A3BC58D2694F10600CB1A24 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC58A2694F10600CB1A24 /* EditImageViewController.swift */; };
+		9A3BC58E2694F10600CB1A24 /* ImageCropHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC58B2694F10600CB1A24 /* ImageCropHandler.swift */; };
 		EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1226943F9E00CD20AB /* AppDelegate.swift */; };
 		EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1426943F9E00CD20AB /* SceneDelegate.swift */; };
 		EA067B1726943F9E00CD20AB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1626943F9E00CD20AB /* GalleryViewController.swift */; };
@@ -31,10 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9A3BC57E2694CBD700CB1A24 /* ImageCropHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropHandler.swift; sourceTree = "<group>"; };
 		9A3BC5812694CC1000CB1A24 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		9A8C2DD92694675C00CB7B66 /* EditImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
-		9A8C2DDD2694678300CB7B66 /* EditImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditImageViewController.storyboard; sourceTree = "<group>"; };
+		9A3BC5892694F10600CB1A24 /* EditImageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditImageViewController.storyboard; sourceTree = "<group>"; };
+		9A3BC58A2694F10600CB1A24 /* EditImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
+		9A3BC58B2694F10600CB1A24 /* ImageCropHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropHandler.swift; sourceTree = "<group>"; };
 		EA067B0F26943F9E00CD20AB /* SecondTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA067B1226943F9E00CD20AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA067B1426943F9E00CD20AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,12 +67,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A8C2DD8269466B300CB7B66 /* EditImage */ = {
+		9A3BC5882694F10600CB1A24 /* EditImage */ = {
 			isa = PBXGroup;
 			children = (
-				9A8C2DDD2694678300CB7B66 /* EditImageViewController.storyboard */,
-				9A8C2DD92694675C00CB7B66 /* EditImageViewController.swift */,
-				9A3BC57E2694CBD700CB1A24 /* ImageCropHandler.swift */,
+				9A3BC5892694F10600CB1A24 /* EditImageViewController.storyboard */,
+				9A3BC58A2694F10600CB1A24 /* EditImageViewController.swift */,
+				9A3BC58B2694F10600CB1A24 /* ImageCropHandler.swift */,
 			);
 			path = EditImage;
 			sourceTree = "<group>";
@@ -129,7 +129,7 @@
 			children = (
 				EAFC8C3F2694545200B78899 /* Base */,
 				EA067B2926943FB500CD20AB /* Gallery */,
-				9A8C2DD8269466B300CB7B66 /* EditImage */,
+				9A3BC5882694F10600CB1A24 /* EditImage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -273,8 +273,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8C2DDE2694678300CB7B66 /* EditImageViewController.storyboard in Resources */,
 				EA067B1F26943F9E00CD20AB /* LaunchScreen.storyboard in Resources */,
+				9A3BC58C2694F10600CB1A24 /* EditImageViewController.storyboard in Resources */,
 				EA067B1C26943F9E00CD20AB /* Assets.xcassets in Resources */,
 				EA067B1A26943F9E00CD20AB /* GalleryViewController.storyboard in Resources */,
 			);
@@ -287,16 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3BC58D2694F10600CB1A24 /* EditImageViewController.swift in Sources */,
 				EAFC8C3A269453A100B78899 /* CoordinatorDelegate.swift in Sources */,
 				EAFC8C3326944E1400B78899 /* UICollectionView+Extension.swift in Sources */,
 				EAFC8C3C269453B400B78899 /* CoordinatorProtocol.swift in Sources */,
 				EA067B1726943F9E00CD20AB /* GalleryViewController.swift in Sources */,
 				EAFC8C3126944E0200B78899 /* Data+Extension.swift in Sources */,
 				EAFC8C412694546100B78899 /* BaseViewController.swift in Sources */,
-				9A3BC57F2694CBD700CB1A24 /* ImageCropHandler.swift in Sources */,
 				EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */,
 				EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */,
-				9A8C2DDA2694675C00CB7B66 /* EditImageViewController.swift in Sources */,
+				9A3BC58E2694F10600CB1A24 /* ImageCropHandler.swift in Sources */,
 				EAFC8C2F26944DF000B78899 /* UIImage+Extension.swift in Sources */,
 				EAFC8C2D26944DDB00B78899 /* UIView+Extension.swift in Sources */,
 				EAFC8C382694538700B78899 /* Storyboarded.swift in Sources */,
