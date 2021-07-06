@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A8C2DDA2694675C00CB7B66 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C2DD92694675C00CB7B66 /* EditImageViewController.swift */; };
+		9A8C2DDE2694678300CB7B66 /* EditImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C2DDD2694678300CB7B66 /* EditImageViewController.storyboard */; };
 		EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1226943F9E00CD20AB /* AppDelegate.swift */; };
 		EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1426943F9E00CD20AB /* SceneDelegate.swift */; };
 		EA067B1726943F9E00CD20AB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1626943F9E00CD20AB /* GalleryViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A8C2DD92694675C00CB7B66 /* EditImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
+		9A8C2DDD2694678300CB7B66 /* EditImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditImageViewController.storyboard; sourceTree = "<group>"; };
 		EA067B0F26943F9E00CD20AB /* SecondTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA067B1226943F9E00CD20AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA067B1426943F9E00CD20AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A8C2DD8269466B300CB7B66 /* EditImage */ = {
+			isa = PBXGroup;
+			children = (
+				9A8C2DD92694675C00CB7B66 /* EditImageViewController.swift */,
+				9A8C2DDD2694678300CB7B66 /* EditImageViewController.storyboard */,
+			);
+			path = EditImage;
+			sourceTree = "<group>";
+		};
 		EA067B0626943F9E00CD20AB = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 			children = (
 				EAFC8C3F2694545200B78899 /* Base */,
 				EA067B2926943FB500CD20AB /* Gallery */,
+				9A8C2DD8269466B300CB7B66 /* EditImage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -253,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8C2DDE2694678300CB7B66 /* EditImageViewController.storyboard in Resources */,
 				EA067B1F26943F9E00CD20AB /* LaunchScreen.storyboard in Resources */,
 				EA067B1C26943F9E00CD20AB /* Assets.xcassets in Resources */,
 				EA067B1A26943F9E00CD20AB /* GalleryViewController.storyboard in Resources */,
@@ -274,6 +289,7 @@
 				EAFC8C412694546100B78899 /* BaseViewController.swift in Sources */,
 				EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */,
 				EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */,
+				9A8C2DDA2694675C00CB7B66 /* EditImageViewController.swift in Sources */,
 				EAFC8C2F26944DF000B78899 /* UIImage+Extension.swift in Sources */,
 				EAFC8C2D26944DDB00B78899 /* UIView+Extension.swift in Sources */,
 				EAFC8C382694538700B78899 /* Storyboarded.swift in Sources */,
@@ -428,6 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SecondTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,6 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SecondTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

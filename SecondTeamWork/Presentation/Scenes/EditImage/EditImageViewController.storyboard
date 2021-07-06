@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t5l-vW-3nO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Image View Controller-->
+        <scene sceneID="0n0-8y-caO">
+            <objects>
+                <viewController storyboardIdentifier="EditImageViewController" id="t5l-vW-3nO" customClass="EditImageViewController" customModule="SecondTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TyK-UJ-syD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-fN-hvK">
+                                <rect key="frame" x="364" y="60.5" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveEdit:" destination="t5l-vW-3nO" eventType="touchUpInside" id="bm9-8H-bxS"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="EK8-LY-UmG">
+                                <rect key="frame" x="0.0" y="110.5" width="414" height="550"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="XT7-Ch-pQr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-5p-NLc">
+                                <rect key="frame" x="16" y="64" width="21" height="23"/>
+                                <state key="normal" image="rotate.left" catalog="system"/>
+                                <connections>
+                                    <action selector="rotateImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="4Sh-R4-bo4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG4-0h-KSV">
+                                <rect key="frame" x="57" y="64.5" width="22.5" height="22"/>
+                                <state key="normal" image="crop" catalog="system"/>
+                                <connections>
+                                    <action selector="cropImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="68G-8N-4MD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XbJ-32-8Hj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kx6-5p-NLc" firstAttribute="top" secondItem="XbJ-32-8Hj" secondAttribute="top" constant="20" id="Gpj-mb-3B0"/>
+                            <constraint firstItem="yx5-fN-hvK" firstAttribute="centerY" secondItem="Kx6-5p-NLc" secondAttribute="centerY" id="IBT-b7-PDs"/>
+                            <constraint firstItem="Kx6-5p-NLc" firstAttribute="leading" secondItem="XbJ-32-8Hj" secondAttribute="leading" constant="16" id="LlV-Ux-eSg"/>
+                            <constraint firstItem="yG4-0h-KSV" firstAttribute="leading" secondItem="Kx6-5p-NLc" secondAttribute="trailing" constant="20" id="TZC-6J-oDv"/>
+                            <constraint firstItem="EK8-LY-UmG" firstAttribute="leading" secondItem="XbJ-32-8Hj" secondAttribute="leading" id="Uhw-aR-tZa"/>
+                            <constraint firstItem="EK8-LY-UmG" firstAttribute="trailing" secondItem="XbJ-32-8Hj" secondAttribute="trailing" id="X3s-qp-rUL"/>
+                            <constraint firstItem="XbJ-32-8Hj" firstAttribute="trailing" secondItem="yx5-fN-hvK" secondAttribute="trailing" constant="16" id="ZdN-pH-0fS"/>
+                            <constraint firstItem="EK8-LY-UmG" firstAttribute="top" secondItem="yx5-fN-hvK" secondAttribute="bottom" constant="20" id="oF3-Hf-H4W"/>
+                            <constraint firstItem="yG4-0h-KSV" firstAttribute="centerY" secondItem="Kx6-5p-NLc" secondAttribute="centerY" id="xvU-Dw-emf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editImage" destination="EK8-LY-UmG" id="Iup-jh-VRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DbU-Yu-aSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="924" height="622"/>
+        <image name="crop" catalog="system" width="128" height="116"/>
+        <image name="rotate.left" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
