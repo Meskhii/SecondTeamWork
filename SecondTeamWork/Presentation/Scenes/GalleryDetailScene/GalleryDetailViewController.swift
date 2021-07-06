@@ -50,8 +50,8 @@ class GalleryDetailViewController: BaseViewController {
         if sender.currentImage == UIImage(systemName: "heart") {
             do {
                 try ImagesFileManager.shared.saveImageInFavouriteImages(imgName: imageName, image: imageView.asImage())
-            } catch FileErrors.cantSaveImage {
             } catch {
+                
             }
             sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         } else {
