@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,67 +12,87 @@
         <scene sceneID="0n0-8y-caO">
             <objects>
                 <viewController storyboardIdentifier="EditImageViewController" id="t5l-vW-3nO" customClass="EditImageViewController" customModule="SecondTeamWork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TyK-UJ-syD">
+                    <view key="view" contentMode="scaleToFill" id="Qb0-Ly-bNE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-fN-hvK">
-                                <rect key="frame" x="364" y="60.5" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveEdit:" destination="t5l-vW-3nO" eventType="touchUpInside" id="bm9-8H-bxS"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="EK8-LY-UmG">
-                                <rect key="frame" x="0.0" y="110.5" width="414" height="550"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d6-6M-YXc">
+                                <rect key="frame" x="195.5" y="818" width="23" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="550" id="XT7-Ch-pQr"/>
+                                    <constraint firstAttribute="height" constant="30" id="5qG-96-oy2"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-5p-NLc">
-                                <rect key="frame" x="16" y="64" width="21" height="23"/>
-                                <state key="normal" image="rotate.left" catalog="system"/>
-                                <connections>
-                                    <action selector="rotateImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="4Sh-R4-bo4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG4-0h-KSV">
-                                <rect key="frame" x="57" y="64.5" width="22.5" height="22"/>
                                 <state key="normal" image="crop" catalog="system"/>
                                 <connections>
-                                    <action selector="cropImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="68G-8N-4MD"/>
+                                    <action selector="cropImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="I7X-k8-jvA"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cw9-dY-rzU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="760"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ana-P3-vap">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWS-XX-MhZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ana-P3-vap" secondAttribute="trailing" id="JR7-go-OVj"/>
+                                    <constraint firstAttribute="bottom" secondItem="ana-P3-vap" secondAttribute="bottom" id="Kdx-9b-MJU"/>
+                                    <constraint firstItem="ana-P3-vap" firstAttribute="top" secondItem="cw9-dY-rzU" secondAttribute="top" id="Ti0-f6-siO"/>
+                                    <constraint firstItem="ana-P3-vap" firstAttribute="centerX" secondItem="cw9-dY-rzU" secondAttribute="centerX" id="Z66-VW-zHd"/>
+                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="top" secondItem="ana-P3-vap" secondAttribute="top" id="Z8j-5z-eo9"/>
+                                    <constraint firstItem="ana-P3-vap" firstAttribute="leading" secondItem="cw9-dY-rzU" secondAttribute="leading" id="Zvk-Vt-NZX"/>
+                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="leading" secondItem="ana-P3-vap" secondAttribute="leading" id="e5B-Oc-vGH"/>
+                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="trailing" secondItem="ana-P3-vap" secondAttribute="trailing" id="fle-36-yyv"/>
+                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="bottom" secondItem="ana-P3-vap" secondAttribute="bottom" id="otd-se-6uB"/>
+                                    <constraint firstItem="ana-P3-vap" firstAttribute="centerY" secondItem="cw9-dY-rzU" secondAttribute="centerY" id="yid-YX-cMb"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35X-Uy-Cad">
+                                <rect key="frame" x="50" y="821.5" width="21" height="23"/>
+                                <state key="normal" image="rotate.left" catalog="system"/>
+                                <connections>
+                                    <action selector="rotateImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="BHM-nN-eIX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5B-wQ-RFw">
+                                <rect key="frame" x="330" y="818" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="xi3-Xd-w0a"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="XbJ-32-8Hj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="xtf-ff-L8K"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Kx6-5p-NLc" firstAttribute="top" secondItem="XbJ-32-8Hj" secondAttribute="top" constant="20" id="Gpj-mb-3B0"/>
-                            <constraint firstItem="yx5-fN-hvK" firstAttribute="centerY" secondItem="Kx6-5p-NLc" secondAttribute="centerY" id="IBT-b7-PDs"/>
-                            <constraint firstItem="Kx6-5p-NLc" firstAttribute="leading" secondItem="XbJ-32-8Hj" secondAttribute="leading" constant="16" id="LlV-Ux-eSg"/>
-                            <constraint firstItem="yG4-0h-KSV" firstAttribute="leading" secondItem="Kx6-5p-NLc" secondAttribute="trailing" constant="20" id="TZC-6J-oDv"/>
-                            <constraint firstItem="EK8-LY-UmG" firstAttribute="leading" secondItem="XbJ-32-8Hj" secondAttribute="leading" id="Uhw-aR-tZa"/>
-                            <constraint firstItem="EK8-LY-UmG" firstAttribute="trailing" secondItem="XbJ-32-8Hj" secondAttribute="trailing" id="X3s-qp-rUL"/>
-                            <constraint firstItem="XbJ-32-8Hj" firstAttribute="trailing" secondItem="yx5-fN-hvK" secondAttribute="trailing" constant="16" id="ZdN-pH-0fS"/>
-                            <constraint firstItem="EK8-LY-UmG" firstAttribute="top" secondItem="yx5-fN-hvK" secondAttribute="bottom" constant="20" id="oF3-Hf-H4W"/>
-                            <constraint firstItem="yG4-0h-KSV" firstAttribute="centerY" secondItem="Kx6-5p-NLc" secondAttribute="centerY" id="xvU-Dw-emf"/>
+                            <constraint firstItem="cw9-dY-rzU" firstAttribute="leading" secondItem="xtf-ff-L8K" secondAttribute="leading" id="7cI-80-sFs"/>
+                            <constraint firstItem="35X-Uy-Cad" firstAttribute="leading" secondItem="xtf-ff-L8K" secondAttribute="leading" constant="50" id="7mo-Bg-aA3"/>
+                            <constraint firstItem="8d6-6M-YXc" firstAttribute="centerX" secondItem="xtf-ff-L8K" secondAttribute="centerX" id="8vh-qb-sdF"/>
+                            <constraint firstItem="cw9-dY-rzU" firstAttribute="top" secondItem="xtf-ff-L8K" secondAttribute="top" id="9Ch-iZ-SYS"/>
+                            <constraint firstItem="xtf-ff-L8K" firstAttribute="trailing" secondItem="C5B-wQ-RFw" secondAttribute="trailing" constant="50" id="TIa-Pi-5Lh"/>
+                            <constraint firstItem="8d6-6M-YXc" firstAttribute="top" secondItem="cw9-dY-rzU" secondAttribute="bottom" constant="14" id="XCo-x1-0Qt"/>
+                            <constraint firstItem="35X-Uy-Cad" firstAttribute="centerY" secondItem="8d6-6M-YXc" secondAttribute="centerY" id="gBo-Wx-4OE"/>
+                            <constraint firstItem="xtf-ff-L8K" firstAttribute="trailing" secondItem="cw9-dY-rzU" secondAttribute="trailing" id="khz-Tx-Ztv"/>
+                            <constraint firstItem="xtf-ff-L8K" firstAttribute="bottom" secondItem="8d6-6M-YXc" secondAttribute="bottom" constant="14" id="la8-5X-foG"/>
+                            <constraint firstItem="C5B-wQ-RFw" firstAttribute="centerY" secondItem="8d6-6M-YXc" secondAttribute="centerY" id="s8d-M7-KI3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="editImage" destination="EK8-LY-UmG" id="Iup-jh-VRY"/>
+                        <outlet property="cropView" destination="zWS-XX-MhZ" id="wlL-7M-cGV"/>
+                        <outlet property="editImage" destination="ana-P3-vap" id="RV9-97-i0Y"/>
+                        <outlet property="scrollView" destination="cw9-dY-rzU" id="QoH-PO-msn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbU-Yu-aSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-575" y="113"/>
+            <point key="canvasLocation" x="-575.36231884057975" y="112.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="924" height="622"/>
+        <image name="1" width="462" height="311"/>
         <image name="crop" catalog="system" width="128" height="116"/>
         <image name="rotate.left" catalog="system" width="128" height="124"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
