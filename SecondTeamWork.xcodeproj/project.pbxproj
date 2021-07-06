@@ -142,11 +142,8 @@
 		EA067B2826943FB000CD20AB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				079B488126945ADB00FBD37E /* GalleryDetailScene */,
-=======
 				EAFC8C5A26946F5A00B78899 /* Album */,
->>>>>>> dev/album-page
 				EAFC8C3F2694545200B78899 /* Base */,
 				EA067B2926943FB500CD20AB /* Gallery */,
 			);
@@ -361,11 +358,8 @@
 				EAFC8C5926946CDA00B78899 /* ImageCell.xib in Resources */,
 				EA067B1C26943F9E00CD20AB /* Assets.xcassets in Resources */,
 				EA067B1A26943F9E00CD20AB /* GalleryViewController.storyboard in Resources */,
-<<<<<<< HEAD
 				079B488526945B2600FBD37E /* GalleryDetailViewController.storyboard in Resources */,
-=======
 				EAFC8C6026946FBB00B78899 /* AlbumsViewController.storyboard in Resources */,
->>>>>>> dev/album-page
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
