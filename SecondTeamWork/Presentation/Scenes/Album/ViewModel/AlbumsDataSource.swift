@@ -15,6 +15,7 @@ class AlbumsDataSource: NSObject {
     private var viewModel: AlbumsViewModelProtocol!
     private var coordinator: CoordinatorProtocol!
     private var albums = [String]()
+    private var images = [UIImage]()
     
     // MARK: - Init
     init(with collectionView: UICollectionView, viewModel: AlbumsViewModelProtocol, coordinator: CoordinatorProtocol) {
@@ -31,6 +32,8 @@ class AlbumsDataSource: NSObject {
     func refresh() {
         do {
             albums = try viewModel.fetchAlbums()
+            images.append(try viewModel.fetchImageFromGallery())
+            images.append(try viewModel.fetchImageFromFavourites())
             collectionView.reloadData()
         } catch {
             print("Unknow Error, while loading images please try again.")
@@ -48,8 +51,8 @@ extension AlbumsDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.deque(ImageCell.self, for: indexPath)
-        //cell.configure(with: album[indexPath.row])
+        let cell = collectionView.deque(AlbumCell.self, for: indexPath)
+        cell.configure(with: images[indexPath.row], and: albums[indexPath.row])
         return cell
     }
     
@@ -72,7 +75,7 @@ extension AlbumsDataSource: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

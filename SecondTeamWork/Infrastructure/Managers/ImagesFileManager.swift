@@ -9,8 +9,8 @@
 import UIKit
 
 enum FileErrors: Error {
-    case cantSaveImage
-    case cantFetchImages
+    case cantSave
+    case cantFetch
     case unknownError
 }
 
@@ -79,13 +79,13 @@ class ImagesFileManager {
     // MARK: - Image Save Logic
     func saveImageInGallery(imgName: String, image: UIImage) throws {
         
-        guard let directory = documentsDirectoryURL else {throw FileErrors.cantSaveImage}
+        guard let directory = documentsDirectoryURL else {throw FileErrors.cantSave}
         
         let dirName = directory.appendingPathComponent("Album")
         let galleryDir = dirName.appendingPathComponent("Gallery")
         let noteUrl = galleryDir.appendingPathComponent("\(imgName).jpeg")
         
-        guard let jpegData = image.jpeg else {throw FileErrors.cantSaveImage}
+        guard let jpegData = image.jpeg else {throw FileErrors.cantSave}
         
         manager.createFile(atPath: noteUrl.path,
                             contents: jpegData,
@@ -94,13 +94,13 @@ class ImagesFileManager {
     
     func saveImageInFavouriteImages(imgName: String, image: UIImage) throws {
         
-        guard let directory = documentsDirectoryURL else {throw FileErrors.cantSaveImage}
+        guard let directory = documentsDirectoryURL else {throw FileErrors.cantSave}
         
         let dirName = directory.appendingPathComponent("Album")
         let galleryDir = dirName.appendingPathComponent("Favourite Images")
         let noteUrl = galleryDir.appendingPathComponent("\(imgName).jpeg")
         
-        guard let jpegData = image.jpeg else {throw FileErrors.cantSaveImage}
+        guard let jpegData = image.jpeg else {throw FileErrors.cantSave}
         
         manager.createFile(atPath: noteUrl.path,
                             contents: jpegData,
@@ -109,7 +109,7 @@ class ImagesFileManager {
     
     // MARK: - Image Fetching Logic
     func fetchImagesFromGallery() throws -> [UIImage] {
-        guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetchImages}
+        guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetch}
         let albumDir = directory.appendingPathComponent("Album")
         let imagesDir = albumDir.appendingPathComponent("Gallery")
         var images = [UIImage]()
@@ -130,7 +130,7 @@ class ImagesFileManager {
     }
     
     func fetchImagesFromFavouriteImages() throws -> [UIImage] {
-        guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetchImages}
+        guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetch}
         let albumDir = directory.appendingPathComponent("Album")
         let imagesDir = albumDir.appendingPathComponent("Favourite Images")
         var images = [UIImage]()
@@ -152,17 +152,18 @@ class ImagesFileManager {
     
     // MARK: - Album Fetching Logic
     func fetchAlbums() throws -> [String] {
-        guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetchImages}
+        guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetch}
         let albumDir = directory.appendingPathComponent("Album")
         var albums = [String]()
         
         let fetchedAlbums = try FileManager.default.contentsOfDirectory(at: albumDir, includingPropertiesForKeys: nil, options: [])
         
         for album in fetchedAlbums {
-            let alb = album.absoluteString
-            albums.append(alb)
+            let alb = album.lastPathComponent
+            if alb != ".DS_Store" {
+                albums.append(alb)
+            }
         }
-                
         return albums
     }
     

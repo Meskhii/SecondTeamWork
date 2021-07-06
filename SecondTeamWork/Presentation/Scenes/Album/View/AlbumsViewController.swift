@@ -18,7 +18,7 @@ class AlbumsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.registerNib(class: ImageCell.self)
+        collectionView.registerNib(class: AlbumCell.self)
         
         configureViewModel()
     }
