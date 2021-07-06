@@ -30,4 +30,20 @@ final class AppCoordinator: CoordinatorProtocol {
         window?.makeKeyAndVisible()
     }
     
+    func popViewController() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func proceedToGalleryDetailVC(imageName: String, image: UIImage, coordinator: CoordinatorProtocol) {
+        let vc = GalleryDetailViewController.instantiateFromStoryboard()
+        vc.imageName = imageName
+        vc.image = image
+        vc.coordinator = coordinator
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func proceedToImageEditVC(image: UIImage) {
+        
+    }
+    
 }

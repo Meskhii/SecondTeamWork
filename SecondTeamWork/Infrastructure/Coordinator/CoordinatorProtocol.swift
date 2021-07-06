@@ -12,4 +12,7 @@ protocol CoordinatorProtocol: AnyObject {
     init(_ window: UIWindow?, navigationController: UINavigationController?)
     
     func start()
+    func popViewController()
+    func proceedToGalleryDetailVC(imageName: String, image: UIImage, coordinator: CoordinatorProtocol)
+    func proceedToImageEditVC(image: UIImage) 
 }
