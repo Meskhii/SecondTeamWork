@@ -108,45 +108,47 @@ class ImagesFileManager {
     }
     
     // MARK: - Image Fetching Logic
-    func fetchImagesFromGallery() throws -> [UIImage] {
+    func fetchImagesFromGallery() throws -> GalleryModel {
         guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetch}
         let albumDir = directory.appendingPathComponent("Album")
         let imagesDir = albumDir.appendingPathComponent("Gallery")
-        var images = [UIImage]()
+        var images = GalleryModel()
         
         let fetchedFiles = try FileManager.default.contentsOfDirectory(at: imagesDir, includingPropertiesForKeys: nil, options: [])
         
         for image in fetchedFiles {
             do {
+                let imageName = image.lastPathComponent
                 let data = try Data(contentsOf: image)
                 guard let img = data.uiImage else {continue}
-                images.append(img)
+                images.images.append(img)
+                images.imageNames.append(imageName)
             } catch {
                 throw FileErrors.unknownError
             }
         }
-                
         return images
     }
     
-    func fetchImagesFromFavouriteImages() throws -> [UIImage] {
+    func fetchImagesFromFavouriteImages() throws -> GalleryModel {
         guard let directory = documentsDirectoryURL else {throw FileErrors.cantFetch}
         let albumDir = directory.appendingPathComponent("Album")
         let imagesDir = albumDir.appendingPathComponent("Favourite Images")
-        var images = [UIImage]()
+        var images = GalleryModel()
         
         let fetchedFiles = try FileManager.default.contentsOfDirectory(at: imagesDir, includingPropertiesForKeys: nil, options: [])
         
         for image in fetchedFiles {
             do {
+                let imageName = image.lastPathComponent
                 let data = try Data(contentsOf: image)
                 guard let img = data.uiImage else {continue}
-                images.append(img)
+                images.images.append(img)
+                images.imageNames.append(imageName)
             } catch {
                 throw FileErrors.unknownError
             }
         }
-                
         return images
     }
     
@@ -171,7 +173,7 @@ class ImagesFileManager {
         guard let directory = documentsDirectoryURL else {return}
         let folderDirectory = directory.appendingPathComponent("Album")
         let galleryDirectory = folderDirectory.appendingPathComponent("Gallery")
-        let galleryImagesUrl = galleryDirectory.appendingPathComponent("\(imageName).jpeg")
+        let galleryImagesUrl = galleryDirectory.appendingPathComponent(imageName)
         do {
             try manager.removeItem(at: galleryImagesUrl)
         } catch {
@@ -183,7 +185,7 @@ class ImagesFileManager {
         guard let directory = documentsDirectoryURL else {return}
         let folderDirectory = directory.appendingPathComponent("Album")
         let favouriteDirectory = folderDirectory.appendingPathComponent("Favourite Images")
-        let favouriteImageUrl = favouriteDirectory.appendingPathComponent("\(imageName).jpeg")
+        let favouriteImageUrl = favouriteDirectory.appendingPathComponent(imageName)
         do {
             try manager.removeItem(at: favouriteImageUrl)
         } catch {
@@ -195,11 +197,11 @@ class ImagesFileManager {
         guard let directory = documentsDirectoryURL else {return false}
         let albumDir = directory.appendingPathComponent("Album")
         let imagesDir = albumDir.appendingPathComponent("Favourite Images")
+        let favouriteImageUrl = imagesDir.appendingPathComponent("\(imageName).jpeg")
         guard let fetchedFiles = try? FileManager.default.contentsOfDirectory(at: imagesDir,
                                                                  includingPropertiesForKeys: nil,
                                                                  options: [.skipsHiddenFiles])  else {return false}
-        let url = URL(string: "\(imageName).jpeg")
-        if fetchedFiles.contains(url!){
+        if fetchedFiles.contains(favouriteImageUrl){
             return true
         } else {
             return false

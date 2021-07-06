@@ -68,7 +68,7 @@ extension AlbumsDataSource: UICollectionViewDelegate {
 // MARK: - UICollectionView Delegate Flow Layout
 extension AlbumsDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let yourWidth = collectionView.bounds.width/2.0
+        let yourWidth = collectionView.bounds.width/2
         let yourHeight = yourWidth
 
         return CGSize(width: yourWidth, height: yourHeight)

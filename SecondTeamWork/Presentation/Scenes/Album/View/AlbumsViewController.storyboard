@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Albums View Controller-->
+        <!--Albums-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="AlbumsViewController" id="Y6W-OH-hqX" customClass="AlbumsViewController" customModule="SecondTeamWork" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IWK-ir-4ji">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8mG-Mx-321">
                                     <size key="itemSize" width="128" height="128"/>
@@ -37,6 +37,8 @@
                             <constraint firstItem="IWK-ir-4ji" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="e0c-di-VLc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Albums" image="rectangle.stack.fill" catalog="system" id="eHe-sn-UUh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="IWK-ir-4ji" id="3rV-t5-w8s"/>
                     </connections>
@@ -47,6 +49,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="rectangle.stack.fill" catalog="system" width="128" height="122"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

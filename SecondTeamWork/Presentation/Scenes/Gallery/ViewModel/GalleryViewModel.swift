@@ -8,13 +8,23 @@
 import UIKit
 
 protocol GalleryViewModelProtocol: AnyObject {
-    func fetchGalleryImages() throws -> [UIImage]
+    func fetchGalleryImages() throws -> GalleryModel
+    
+    var controller: CoordinatorDelegate { get }
+    
+    init(controller: CoordinatorDelegate)
 }
 
 final class GalleryViewModel: GalleryViewModelProtocol {
     
-    func fetchGalleryImages() throws -> [UIImage] {
-        var images = [UIImage]()
+    private(set) var controller: CoordinatorDelegate
+    
+    init(controller: CoordinatorDelegate) {
+        self.controller = controller
+    }
+    
+    func fetchGalleryImages() throws -> GalleryModel {
+        var images = GalleryModel()
         do {
             images = try ImagesFileManager.shared.fetchImagesFromGallery()
         } catch {

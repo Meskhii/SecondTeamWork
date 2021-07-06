@@ -21,19 +21,19 @@ class GalleryViewController: BaseViewController {
         super.viewDidLoad()
         
         collectionView.registerNib(class: ImageCell.self)
-        
         configureViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(true)
         galleryDataSource.refresh()
+        navigationController?.navigationBar.isHidden = true
     }
     
     // MARK: - View Model Configuration
     private func configureViewModel() {
-        galleryViewModel = GalleryViewModel()
-        galleryDataSource = GalleryDataSource(with: collectionView, viewModel: galleryViewModel, coordinator: coordinator!)
+        galleryViewModel = GalleryViewModel(controller: self)
+        galleryDataSource = GalleryDataSource(with: collectionView, viewModel: galleryViewModel)
         
         galleryDataSource.refresh()
     }

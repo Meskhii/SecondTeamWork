@@ -27,22 +27,22 @@ final class AlbumsViewModel: AlbumsViewModelProtocol {
     }
     
     func fetchImageFromGallery() throws -> UIImage {
-        var image = UIImage()
+        var gallery = GalleryModel()
         do {
-            image = try ImagesFileManager.shared.fetchImagesFromGallery().last ?? UIImage(named: "emptyAlbum")!
+            gallery = try ImagesFileManager.shared.fetchImagesFromGallery()
         }catch {
             throw FileErrors.cantFetch
         }
-        return image
+        return gallery.images.last ?? UIImage(named: "emptyAlbum")!
     }
     
     func fetchImageFromFavourites() throws -> UIImage {
-        var image = UIImage()
+        var favourites = GalleryModel()
         do {
-            image = try ImagesFileManager.shared.fetchImagesFromFavouriteImages().last ?? UIImage(named: "emptyAlbum")!
+            favourites = try ImagesFileManager.shared.fetchImagesFromFavouriteImages()
         } catch {
             throw FileErrors.cantFetch
         }
-        return image
+        return favourites.images.last ?? UIImage(named: "emptyAlbum")!
     }
 }

@@ -19,12 +19,12 @@ class GalleryDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         checkIfImageIsFavourited()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewWillAppear(true)
+        super.viewWillAppear(true)
 
         imageView.image = image
     }
