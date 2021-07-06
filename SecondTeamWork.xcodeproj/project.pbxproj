@@ -13,6 +13,10 @@
 		079B488A2694B73200FBD37E /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079B48892694B73200FBD37E /* TabBarController.storyboard */; };
 		079B488D2694BBD800FBD37E /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B488C2694BBD800FBD37E /* GalleryModel.swift */; };
 		9A3BC5A22694F2FF00CB1A24 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC5A12694F2FF00CB1A24 /* UIImageView+Extension.swift */; };
+		9A3BC5C72694FB3B00CB1A24 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC5C62694FB3B00CB1A24 /* FavouritesViewController.swift */; };
+		9A3BC5CA2694FB4C00CB1A24 /* FavouritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BC5C92694FB4C00CB1A24 /* FavouritesViewController.storyboard */; };
+		9A3BC5CD2694FC7F00CB1A24 /* FavouritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC5CC2694FC7F00CB1A24 /* FavouritesDataSource.swift */; };
+		9A3BC5D02694FCAC00CB1A24 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC5CF2694FCAC00CB1A24 /* FavouritesViewModel.swift */; };
 		EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1226943F9E00CD20AB /* AppDelegate.swift */; };
 		EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1426943F9E00CD20AB /* SceneDelegate.swift */; };
 		EA067B1726943F9E00CD20AB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1626943F9E00CD20AB /* GalleryViewController.swift */; };
@@ -52,6 +56,10 @@
 		079B48892694B73200FBD37E /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		079B488C2694BBD800FBD37E /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
 		9A3BC5A12694F2FF00CB1A24 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		9A3BC5C62694FB3B00CB1A24 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		9A3BC5C92694FB4C00CB1A24 /* FavouritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouritesViewController.storyboard; sourceTree = "<group>"; };
+		9A3BC5CC2694FC7F00CB1A24 /* FavouritesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDataSource.swift; sourceTree = "<group>"; };
+		9A3BC5CF2694FCAC00CB1A24 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 		EA067B0F26943F9E00CD20AB /* SecondTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA067B1226943F9E00CD20AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA067B1426943F9E00CD20AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +131,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9A3BC5C32694FB0C00CB1A24 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				9A3BC5C52694FB2200CB1A24 /* View */,
+				9A3BC5C42694FB1A00CB1A24 /* ViewModel */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		9A3BC5C42694FB1A00CB1A24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A3BC5CC2694FC7F00CB1A24 /* FavouritesDataSource.swift */,
+				9A3BC5CF2694FCAC00CB1A24 /* FavouritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9A3BC5C52694FB2200CB1A24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A3BC5C62694FB3B00CB1A24 /* FavouritesViewController.swift */,
+				9A3BC5C92694FB4C00CB1A24 /* FavouritesViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EA067B0626943F9E00CD20AB = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +213,7 @@
 				079B488126945ADB00FBD37E /* GalleryDetailScene */,
 				EAFC8C5A26946F5A00B78899 /* Album */,
 				EAFC8C3F2694545200B78899 /* Base */,
+				9A3BC5C32694FB0C00CB1A24 /* Favourites */,
 				EA067B2926943FB500CD20AB /* Gallery */,
 			);
 			path = Scenes;
@@ -403,6 +439,7 @@
 				079B488A2694B73200FBD37E /* TabBarController.storyboard in Resources */,
 				EA0AD0C22694F7EC0026D471 /* EditImageViewController.storyboard in Resources */,
 				EAFC8C5926946CDA00B78899 /* ImageCell.xib in Resources */,
+				9A3BC5CA2694FB4C00CB1A24 /* FavouritesViewController.storyboard in Resources */,
 				EA067B1C26943F9E00CD20AB /* Assets.xcassets in Resources */,
 				EA067B1A26943F9E00CD20AB /* GalleryViewController.storyboard in Resources */,
 				079B488526945B2600FBD37E /* GalleryDetailViewController.storyboard in Resources */,
@@ -429,12 +466,15 @@
 				EAFC8C5826946CDA00B78899 /* ImageCell.swift in Sources */,
 				EA0AD0C42694F7F70026D471 /* ImageCropHandler.swift in Sources */,
 				EA0AD0C62694F7FA0026D471 /* EditImageViewController.swift in Sources */,
+				9A3BC5C72694FB3B00CB1A24 /* FavouritesViewController.swift in Sources */,
 				9A3BC5A22694F2FF00CB1A24 /* UIImageView+Extension.swift in Sources */,
 				EAFC8C6426946FD400B78899 /* AlbumsViewModel.swift in Sources */,
 				EAFC8C412694546100B78899 /* BaseViewController.swift in Sources */,
 				EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */,
 				EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */,
 				EAFC8C2D26944DDB00B78899 /* UIView+Extension.swift in Sources */,
+				9A3BC5CD2694FC7F00CB1A24 /* FavouritesDataSource.swift in Sources */,
+				9A3BC5D02694FCAC00CB1A24 /* FavouritesViewModel.swift in Sources */,
 				EAFC8C5E26946FB200B78899 /* AlbumsViewController.swift in Sources */,
 				EAFC8C382694538700B78899 /* Storyboarded.swift in Sources */,
 				EAFC8C3E269453BE00B78899 /* AppCoordinator.swift in Sources */,
