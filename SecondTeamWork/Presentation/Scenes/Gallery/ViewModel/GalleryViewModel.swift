@@ -18,7 +18,7 @@ final class GalleryViewModel: GalleryViewModelProtocol {
         do {
             images = try ImagesFileManager.shared.fetchImagesFromGallery()
         } catch {
-            throw FileErrors.cantFetchImages
+            throw FileErrors.cantFetch
         }
         return images
     }

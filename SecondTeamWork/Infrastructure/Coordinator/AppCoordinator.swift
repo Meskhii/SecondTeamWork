@@ -21,7 +21,8 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let vc = GalleryViewController.instantiateFromStoryboard()
+       // let vc = GalleryViewController.instantiateFromStoryboard()
+        let vc = AlbumsViewController.instantiateFromStoryboard()
         vc.coordinator = self
         navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(vc, animated: true)
