@@ -12,6 +12,7 @@
 		079B48882694B72800FBD37E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B48872694B72800FBD37E /* TabBarController.swift */; };
 		079B488A2694B73200FBD37E /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079B48892694B73200FBD37E /* TabBarController.storyboard */; };
 		079B488D2694BBD800FBD37E /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B488C2694BBD800FBD37E /* GalleryModel.swift */; };
+		9A3BC5A22694F2FF00CB1A24 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BC5A12694F2FF00CB1A24 /* UIImageView+Extension.swift */; };
 		EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1226943F9E00CD20AB /* AppDelegate.swift */; };
 		EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1426943F9E00CD20AB /* SceneDelegate.swift */; };
 		EA067B1726943F9E00CD20AB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA067B1626943F9E00CD20AB /* GalleryViewController.swift */; };
@@ -47,6 +48,7 @@
 		079B48872694B72800FBD37E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		079B48892694B73200FBD37E /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		079B488C2694BBD800FBD37E /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		9A3BC5A12694F2FF00CB1A24 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		EA067B0F26943F9E00CD20AB /* SecondTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA067B1226943F9E00CD20AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA067B1426943F9E00CD20AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				EAFC8C2C26944DDB00B78899 /* UIView+Extension.swift */,
 				EAFC8C2E26944DF000B78899 /* UIImage+Extension.swift */,
 				EAFC8C3026944E0200B78899 /* Data+Extension.swift */,
+				9A3BC5A12694F2FF00CB1A24 /* UIImageView+Extension.swift */,
 				EAFC8C3226944E1400B78899 /* UICollectionView+Extension.swift */,
 				EAFC8C3426944E2900B78899 /* UICollectionViewCell+Extension.swift */,
 			);
@@ -406,6 +409,7 @@
 				EA067B1726943F9E00CD20AB /* GalleryViewController.swift in Sources */,
 				EAFC8C3126944E0200B78899 /* Data+Extension.swift in Sources */,
 				EAFC8C5826946CDA00B78899 /* ImageCell.swift in Sources */,
+				9A3BC5A22694F2FF00CB1A24 /* UIImageView+Extension.swift in Sources */,
 				EAFC8C6426946FD400B78899 /* AlbumsViewModel.swift in Sources */,
 				EAFC8C412694546100B78899 /* BaseViewController.swift in Sources */,
 				EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */,
@@ -568,6 +572,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SecondTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +591,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SecondTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
