@@ -17,8 +17,13 @@ class TabBarController: UITabBarController, Storyboarded, CoordinatorDelegate {
         let vc1 = self.viewControllers![0] as! GalleryViewController
         vc1.coordinator = coordinator
 
+       
+        
         let vc2 = self.viewControllers![1] as! AlbumsViewController
         vc2.coordinator = coordinator
+        
+        let vc3 = self.viewControllers![2] as! FavouritesViewController
+        vc3.coordinator = coordinator
     }
 
 }
