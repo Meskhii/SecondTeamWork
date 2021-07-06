@@ -54,7 +54,8 @@ class EditImageViewController: BaseViewController {
     }
     
     @IBAction func saveImage(_ sender: Any) {
-      try? ImagesFileManager.shared.saveImageInGallery(imgName: "1", image: newImage)    }
+        let id = UUID.init().uuidString
+      try? ImagesFileManager.shared.saveImageInGallery(imgName: id, image: newImage)    }
     
 }
 

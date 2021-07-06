@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWS-XX-MhZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="760"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d6-6M-YXc">
                                 <rect key="frame" x="195.5" y="818" width="23" height="30"/>
                                 <constraints>
@@ -26,26 +29,19 @@
                                     <action selector="cropImage:" destination="t5l-vW-3nO" eventType="touchUpInside" id="I7X-k8-jvA"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cw9-dY-rzU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw9-dY-rzU">
                                 <rect key="frame" x="0.0" y="44" width="414" height="760"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ana-P3-vap">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWS-XX-MhZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
-                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ana-P3-vap" secondAttribute="trailing" id="JR7-go-OVj"/>
                                     <constraint firstAttribute="bottom" secondItem="ana-P3-vap" secondAttribute="bottom" id="Kdx-9b-MJU"/>
                                     <constraint firstItem="ana-P3-vap" firstAttribute="top" secondItem="cw9-dY-rzU" secondAttribute="top" id="Ti0-f6-siO"/>
                                     <constraint firstItem="ana-P3-vap" firstAttribute="centerX" secondItem="cw9-dY-rzU" secondAttribute="centerX" id="Z66-VW-zHd"/>
-                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="top" secondItem="ana-P3-vap" secondAttribute="top" id="Z8j-5z-eo9"/>
                                     <constraint firstItem="ana-P3-vap" firstAttribute="leading" secondItem="cw9-dY-rzU" secondAttribute="leading" id="Zvk-Vt-NZX"/>
-                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="leading" secondItem="ana-P3-vap" secondAttribute="leading" id="e5B-Oc-vGH"/>
-                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="trailing" secondItem="ana-P3-vap" secondAttribute="trailing" id="fle-36-yyv"/>
-                                    <constraint firstItem="zWS-XX-MhZ" firstAttribute="bottom" secondItem="ana-P3-vap" secondAttribute="bottom" id="otd-se-6uB"/>
                                     <constraint firstItem="ana-P3-vap" firstAttribute="centerY" secondItem="cw9-dY-rzU" secondAttribute="centerY" id="yid-YX-cMb"/>
                                 </constraints>
                             </scrollView>
@@ -69,13 +65,17 @@
                         <constraints>
                             <constraint firstItem="cw9-dY-rzU" firstAttribute="leading" secondItem="xtf-ff-L8K" secondAttribute="leading" id="7cI-80-sFs"/>
                             <constraint firstItem="35X-Uy-Cad" firstAttribute="leading" secondItem="xtf-ff-L8K" secondAttribute="leading" constant="50" id="7mo-Bg-aA3"/>
+                            <constraint firstItem="zWS-XX-MhZ" firstAttribute="bottom" secondItem="ana-P3-vap" secondAttribute="bottom" id="86v-gM-drk"/>
                             <constraint firstItem="8d6-6M-YXc" firstAttribute="centerX" secondItem="xtf-ff-L8K" secondAttribute="centerX" id="8vh-qb-sdF"/>
                             <constraint firstItem="cw9-dY-rzU" firstAttribute="top" secondItem="xtf-ff-L8K" secondAttribute="top" id="9Ch-iZ-SYS"/>
                             <constraint firstItem="xtf-ff-L8K" firstAttribute="trailing" secondItem="C5B-wQ-RFw" secondAttribute="trailing" constant="50" id="TIa-Pi-5Lh"/>
                             <constraint firstItem="8d6-6M-YXc" firstAttribute="top" secondItem="cw9-dY-rzU" secondAttribute="bottom" constant="14" id="XCo-x1-0Qt"/>
                             <constraint firstItem="35X-Uy-Cad" firstAttribute="centerY" secondItem="8d6-6M-YXc" secondAttribute="centerY" id="gBo-Wx-4OE"/>
+                            <constraint firstItem="zWS-XX-MhZ" firstAttribute="top" secondItem="ana-P3-vap" secondAttribute="top" id="ggK-Ia-f9j"/>
+                            <constraint firstItem="zWS-XX-MhZ" firstAttribute="trailing" secondItem="ana-P3-vap" secondAttribute="trailing" id="irZ-DP-neM"/>
                             <constraint firstItem="xtf-ff-L8K" firstAttribute="trailing" secondItem="cw9-dY-rzU" secondAttribute="trailing" id="khz-Tx-Ztv"/>
                             <constraint firstItem="xtf-ff-L8K" firstAttribute="bottom" secondItem="8d6-6M-YXc" secondAttribute="bottom" constant="14" id="la8-5X-foG"/>
+                            <constraint firstItem="zWS-XX-MhZ" firstAttribute="leading" secondItem="ana-P3-vap" secondAttribute="leading" id="pxf-e7-Dd5"/>
                             <constraint firstItem="C5B-wQ-RFw" firstAttribute="centerY" secondItem="8d6-6M-YXc" secondAttribute="centerY" id="s8d-M7-KI3"/>
                         </constraints>
                     </view>
