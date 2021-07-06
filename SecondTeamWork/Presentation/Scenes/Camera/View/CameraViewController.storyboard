@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera View Controller-->
+        <!--Camera-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="CameraViewController" id="Y6W-OH-hqX" customClass="CameraViewController" customModule="SecondTeamWork" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmN-Ch-Jh4">
-                                <rect key="frame" x="179" y="788" width="56" height="52"/>
+                                <rect key="frame" x="179" y="739" width="56" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="f3C-GB-X4Q"/>
                                     <constraint firstAttribute="height" constant="53" id="naZ-Vf-dDj"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wTn-dH-y33">
-                                <rect key="frame" x="0.0" y="44" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="687"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -46,6 +46,8 @@
                             <constraint firstItem="wTn-dH-y33" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="sIs-QY-7RV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" id="JoK-pl-IxK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="button" destination="XmN-Ch-Jh4" id="jB3-qu-AdN"/>
                         <outlet property="imgView" destination="wTn-dH-y33" id="JJw-EO-6IC"/>
@@ -57,6 +59,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="circle.dashed.inset.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

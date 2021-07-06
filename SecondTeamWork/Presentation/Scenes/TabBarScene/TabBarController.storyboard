@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Vv-0c-B1c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Vv-0c-B1c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +19,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="dhP-mu-SOK" kind="relationship" relationship="viewControllers" id="pDm-Fg-eBo"/>
-                        <segue destination="HlJ-hp-Az4" kind="relationship" relationship="viewControllers" id="Ax1-Zg-Hoc"/>
-                        <segue destination="Nb2-gg-uvg" kind="relationship" relationship="viewControllers" id="BCV-lH-gQv"/>
+                        <segue destination="Nb2-gg-uvg" kind="relationship" relationship="viewControllers" id="iyT-SG-xh3"/>
+                        <segue destination="HlJ-hp-Az4" kind="relationship" relationship="viewControllers" id="Jek-a8-1b9"/>
+                        <segue destination="bmM-dF-xOZ" kind="relationship" relationship="viewControllers" id="fst-yQ-jhp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uon-ek-OXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -56,6 +57,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFx-uz-2RX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969" y="96"/>
+        </scene>
+        <!--CameraViewController-->
+        <scene sceneID="SJ2-pJ-TFm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CameraViewController" id="bmM-dF-xOZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="D78-c0-TIl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1i-u7-Kto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="198"/>
         </scene>
     </scenes>
     <resources>

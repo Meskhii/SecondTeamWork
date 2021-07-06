@@ -27,7 +27,7 @@ final class FavouritesViewModel: FavouritesViewModelProtocol {
     func fetchImagesFromFavouriteImages() throws -> GalleryModel {
         var images = GalleryModel()
         do {
-            images = try ImagesFileManager.shared.fetchImagesFromGallery()
+            images = try ImagesFileManager.shared.fetchImagesFromFavouriteImages()
         } catch {
             throw FileErrors.cantFetch
         }

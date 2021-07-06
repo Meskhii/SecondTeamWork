@@ -11,17 +11,15 @@ import UIKit
 class CameraDataSource : NSObject {
     
     private var viewModel: CameraViewModelProtocol!
-    private var coordinator: CoordinatorProtocol!
 //    private var albums = [String]()
     private var images = [UIImage]()
     private var imageManager : ImagesFileManager!
     private var imageView = UIImage()
     
     
-    init(with viewModel: CameraViewModelProtocol, coordinator: CoordinatorProtocol, imageView : UIImage) {
+    init(with viewModel: CameraViewModelProtocol, imageView : UIImage) {
         super.init()
         self.viewModel   = viewModel
-        self.coordinator = coordinator
         self.imageView   = imageView
     }
  

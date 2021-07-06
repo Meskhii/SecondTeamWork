@@ -9,8 +9,8 @@ import UIKit
 
 class FavouritesViewController: BaseViewController {
     // MARK: - Variables
-    private var galleryViewModel: GalleryViewModelProtocol!
-    private var galleryDataSource: GalleryDataSource!
+    private var galleryViewModel: FavouritesViewModelProtocol!
+    private var favouritesDataSource: FavouritesDataSource!
     
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -25,16 +25,16 @@ class FavouritesViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(true)
-        galleryDataSource.refresh()
+        favouritesDataSource.refresh()
         navigationController?.navigationBar.isHidden = true
     }
     
     // MARK: - View Model Configuration
     private func configureViewModel() {
-        galleryViewModel = GalleryViewModel(controller: self)
-        galleryDataSource = GalleryDataSource(with: collectionView, viewModel: galleryViewModel)
+        galleryViewModel = FavouritesViewModel(controller: self)
+        favouritesDataSource = FavouritesDataSource(with: collectionView, viewModel: galleryViewModel)
         
-        galleryDataSource.refresh()
+        favouritesDataSource.refresh()
     }
 
 }

@@ -36,7 +36,7 @@ class CameraViewController: BaseViewController, UIImagePickerControllerDelegate,
     
     private func configureViewModel() {
         cameraViewModel = CameraViewModel(controller: self)
-        cameraDataSource = CameraDataSource(with: cameraViewModel, coordinator: coordinator!, imageView: imgView.image!)
+        cameraDataSource = CameraDataSource(with: cameraViewModel, imageView: imgView.image!)
         cameraDataSource.refresh()
     }
 }

@@ -13,11 +13,11 @@ class FavouritesDataSource: NSObject {
     
     // MARK: - Variables
     private var collectionView: UICollectionView!
-    private var viewModel: GalleryViewModelProtocol!
+    private var viewModel: FavouritesViewModelProtocol!
     private var images = GalleryModel()
     
     // MARK: - Init
-    init(with collectionView: UICollectionView, viewModel: GalleryViewModelProtocol) {
+    init(with collectionView: UICollectionView, viewModel: FavouritesViewModelProtocol) {
         super.init()
         
         self.collectionView = collectionView
@@ -29,7 +29,7 @@ class FavouritesDataSource: NSObject {
     
     func refresh() {
         do {
-            images = try viewModel.fetchGalleryImages()
+            images = try viewModel.fetchImagesFromFavouriteImages()
             collectionView.reloadData()
         } catch {
             print("Unknow Error, while loading images please try again.")
