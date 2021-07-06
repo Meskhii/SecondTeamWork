@@ -24,6 +24,10 @@
 		EAFC8C3C269453B400B78899 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC8C3B269453B400B78899 /* CoordinatorProtocol.swift */; };
 		EAFC8C3E269453BE00B78899 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC8C3D269453BE00B78899 /* AppCoordinator.swift */; };
 		EAFC8C412694546100B78899 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC8C402694546100B78899 /* BaseViewController.swift */; };
+		EAFC8C5026946CA900B78899 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC8C4F26946CA900B78899 /* GalleryDataSource.swift */; };
+		EAFC8C5226946CB600B78899 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC8C5126946CB600B78899 /* GalleryViewModel.swift */; };
+		EAFC8C5826946CDA00B78899 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC8C5626946CDA00B78899 /* ImageCell.swift */; };
+		EAFC8C5926946CDA00B78899 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC8C5726946CDA00B78899 /* ImageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		EAFC8C3B269453B400B78899 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		EAFC8C3D269453BE00B78899 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EAFC8C402694546100B78899 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EAFC8C4F26946CA900B78899 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
+		EAFC8C5126946CB600B78899 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		EAFC8C5626946CDA00B78899 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		EAFC8C5726946CDA00B78899 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +126,8 @@
 		EA067B2926943FB500CD20AB /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				EA067B1626943F9E00CD20AB /* GalleryViewController.swift */,
-				EA067B1826943F9E00CD20AB /* GalleryViewController.storyboard */,
+				EAFC8C4E26946C9800B78899 /* ViewModel */,
+				EAFC8C4D26946C9400B78899 /* View */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -196,6 +204,34 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		EAFC8C4D26946C9400B78899 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC8C5526946CC600B78899 /* ImageCell */,
+				EA067B1626943F9E00CD20AB /* GalleryViewController.swift */,
+				EA067B1826943F9E00CD20AB /* GalleryViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAFC8C4E26946C9800B78899 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC8C4F26946CA900B78899 /* GalleryDataSource.swift */,
+				EAFC8C5126946CB600B78899 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAFC8C5526946CC600B78899 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC8C5626946CDA00B78899 /* ImageCell.swift */,
+				EAFC8C5726946CDA00B78899 /* ImageCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA067B1F26943F9E00CD20AB /* LaunchScreen.storyboard in Resources */,
+				EAFC8C5926946CDA00B78899 /* ImageCell.xib in Resources */,
 				EA067B1C26943F9E00CD20AB /* Assets.xcassets in Resources */,
 				EA067B1A26943F9E00CD20AB /* GalleryViewController.storyboard in Resources */,
 			);
@@ -268,9 +305,11 @@
 			files = (
 				EAFC8C3A269453A100B78899 /* CoordinatorDelegate.swift in Sources */,
 				EAFC8C3326944E1400B78899 /* UICollectionView+Extension.swift in Sources */,
+				EAFC8C5026946CA900B78899 /* GalleryDataSource.swift in Sources */,
 				EAFC8C3C269453B400B78899 /* CoordinatorProtocol.swift in Sources */,
 				EA067B1726943F9E00CD20AB /* GalleryViewController.swift in Sources */,
 				EAFC8C3126944E0200B78899 /* Data+Extension.swift in Sources */,
+				EAFC8C5826946CDA00B78899 /* ImageCell.swift in Sources */,
 				EAFC8C412694546100B78899 /* BaseViewController.swift in Sources */,
 				EA067B1326943F9E00CD20AB /* AppDelegate.swift in Sources */,
 				EA067B1526943F9E00CD20AB /* SceneDelegate.swift in Sources */,
@@ -278,6 +317,7 @@
 				EAFC8C2D26944DDB00B78899 /* UIView+Extension.swift in Sources */,
 				EAFC8C382694538700B78899 /* Storyboarded.swift in Sources */,
 				EAFC8C3E269453BE00B78899 /* AppCoordinator.swift in Sources */,
+				EAFC8C5226946CB600B78899 /* GalleryViewModel.swift in Sources */,
 				EAFC8C2B26944AB700B78899 /* ImagesFileManager.swift in Sources */,
 				EAFC8C3526944E2900B78899 /* UICollectionViewCell+Extension.swift in Sources */,
 			);
