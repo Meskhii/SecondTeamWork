@@ -14,5 +14,6 @@ protocol CoordinatorProtocol: AnyObject {
     func start()
     func popViewController()
     func proceedToGalleryDetailVC(imageName: String, image: UIImage, coordinator: CoordinatorProtocol)
-    func proceedToImageEditVC(image: UIImage) 
+    func proceedToImageEditVC(image: UIImage)
+    func proceedToGalleryVC() 
 }

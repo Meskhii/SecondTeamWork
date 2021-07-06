@@ -43,7 +43,16 @@ final class AppCoordinator: CoordinatorProtocol {
     }
 
     func proceedToImageEditVC(image: UIImage) {
-        
+        let vc = EditImageViewController.instantiateFromStoryboard()
+        vc.coordinator = self
+        vc.newImage = image
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func proceedToGalleryVC() {
+        let vc = GalleryViewController.instantiateFromStoryboard()
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

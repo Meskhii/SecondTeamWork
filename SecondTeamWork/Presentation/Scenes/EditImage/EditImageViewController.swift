@@ -9,6 +9,8 @@ import UIKit
 
 class EditImageViewController: BaseViewController {
     
+    var newImage: UIImage!
+    
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
             scrollView.delegate = self
@@ -16,9 +18,7 @@ class EditImageViewController: BaseViewController {
             scrollView.maximumZoomScale = 2
         }
     }
-    
     @IBOutlet weak var editImage: UIImageView!
-    var newImage: UIImage!
     @IBOutlet weak var cropView: UIView! {
         didSet {
             cropView.layer.cornerRadius = 5
@@ -48,14 +48,17 @@ class EditImageViewController: BaseViewController {
     }
     
     @IBAction func rotateImage(_ sender: Any) {
-//        self.editImage.transform = self.editImage.transform.rotated(by: -CGFloat(M_PI_2))
-         newImage = editImage.image!.rotate(radians: -.pi/2)
+        //        self.editImage.transform = self.editImage.transform.rotated(by: -CGFloat(M_PI_2))
+        newImage = editImage.image!.rotate(radians: -.pi/2)
         editImage.image = newImage
     }
     
     @IBAction func saveImage(_ sender: Any) {
         let id = UUID.init().uuidString
-      try? ImagesFileManager.shared.saveImageInGallery(imgName: id, image: newImage)    }
+        try? ImagesFileManager.shared.saveImageInGallery(imgName: id, image: newImage)
+        coordinator?.proceedToGalleryVC()
+    }
+    
     
 }
 
