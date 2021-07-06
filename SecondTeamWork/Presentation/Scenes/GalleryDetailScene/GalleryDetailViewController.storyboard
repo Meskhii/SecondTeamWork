@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GalleryDetailViewController" id="Y6W-OH-hqX" customClass="GalleryDetailViewController" customModule="SecondTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code" translatesAutoresizingMaskIntoConstraints="NO" id="Vir-OC-c37">
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="iCP-cC-Xty">
+                                <rect key="frame" x="24" y="802" width="366" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-hU-1Z3">
+                                        <rect key="frame" x="0.0" y="0.0" width="27.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Button">
+                                            <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="12r-Pr-zAm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNR-aC-C8F">
+                                        <rect key="frame" x="169.5" y="0.0" width="27" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Button" image="heart" catalog="system"/>
+                                        <connections>
+                                            <action selector="favouriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wU5-z9-SOK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dot-fo-FuA">
+                                        <rect key="frame" x="338.5" y="0.0" width="27.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Button">
+                                            <imageReference key="image" image="trash" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Yts-5C-6bS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="021-m9-rTC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vir-OC-c37" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0YN-6H-3y7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iCP-cC-Xty" secondAttribute="trailing" constant="24" id="E0W-kG-8go"/>
+                            <constraint firstItem="Vir-OC-c37" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="GVO-wH-4Ee"/>
+                            <constraint firstItem="iCP-cC-Xty" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Q1b-FM-72g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vir-OC-c37" secondAttribute="trailing" id="S9c-LY-ATb"/>
+                            <constraint firstItem="iCP-cC-Xty" firstAttribute="top" secondItem="Vir-OC-c37" secondAttribute="bottom" id="fPQ-Px-kqE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="iCP-cC-Xty" secondAttribute="bottom" constant="20" id="lb4-c2-Bbm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo" id="qgy-kh-ZcH">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="Dc7-YR-sq9">
+                            <connections>
+                                <action selector="backButton:" destination="Y6W-OH-hqX" id="80I-Iz-U1l"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="aP6-Lq-1mb">
+                            <connections>
+                                <action selector="editButton:" destination="Y6W-OH-hqX" id="uA4-eL-AOh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="favouriteIcon" destination="uNR-aC-C8F" id="HqN-to-9C5"/>
+                        <outlet property="imageView" destination="Vir-OC-c37" id="IKK-75-JMS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.1014492753625" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="code" width="5472" height="3648"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -166,6 +166,45 @@ class ImagesFileManager {
         return albums
     }
     
+    func deleteImageFromGallery(imageName: String) {
+        guard let directory = documentsDirectoryURL else {return}
+        let folderDirectory = directory.appendingPathComponent("Album")
+        let galleryDirectory = folderDirectory.appendingPathComponent("Gallery")
+        let galleryImagesUrl = galleryDirectory.appendingPathComponent("\(imageName).jpeg")
+        do {
+            try manager.removeItem(at: galleryImagesUrl)
+        } catch {
+            print("Cannot Delete")
+        }
+    }
+    
+    func deleteImageFromFavourite(imageName: String) {
+        guard let directory = documentsDirectoryURL else {return}
+        let folderDirectory = directory.appendingPathComponent("Album")
+        let favouriteDirectory = folderDirectory.appendingPathComponent("Favourite Images")
+        let favouriteImageUrl = favouriteDirectory.appendingPathComponent("\(imageName).jpeg")
+        do {
+            try manager.removeItem(at: favouriteImageUrl)
+        } catch {
+            print("Cannot Delete")
+        }
+    }
+    
+    func checkIfImageIsFavourited(imageName: String) -> Bool {
+        guard let directory = documentsDirectoryURL else {return false}
+        let albumDir = directory.appendingPathComponent("Album")
+        let imagesDir = albumDir.appendingPathComponent("Favourite Images")
+        guard let fetchedFiles = try? FileManager.default.contentsOfDirectory(at: imagesDir,
+                                                                 includingPropertiesForKeys: nil,
+                                                                 options: [.skipsHiddenFiles])  else {return false}
+        let url = URL(string: "\(imageName).jpeg")
+        if fetchedFiles.contains(url!){
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
 }
 
